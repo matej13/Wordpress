@@ -6,7 +6,7 @@ MY_WP_ROOT=/opt/app-root/src
 WP_CONTENT_ROOT=/data/wp-content
 MY_SRV=$(echo $OPENSHIFT_BUILD_NAME|awk -F'-' '{print $1"-"$2}')
 
-WP_SITEURL=https://${MY_SRV}-${OPENSHIFT_BUILD_NAMESPACE}.${ENV_SUB_DOMAIN}
+WP_SITEURL=http://wordpress-mysql-matej-wordpress12051.playground.itandtel.at/
 
 export MY_WP_ROOT WP_CONTENT_ROOT MY_SRV
 
