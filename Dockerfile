@@ -1,12 +1,12 @@
 FROM registry.access.redhat.com/rhscl/php-56-rhel7:latest
 
 # To be able to change the Image
-#USER 0
+USER 0
 
 ENV WP_DL https://wordpress.org/latest.tar.gz
 ENV SMTP_DL https://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.6.zip
 
-# mod_authn_dbd mod_authn_dbm mod_authn_dbd mod_authn_dbm mod_echo mod_lua
+ mod_authn_dbd mod_authn_dbm mod_authn_dbd mod_authn_dbm mod_echo mod_lua
 
 RUN set -x && \
     yum -y autoremove rh-php56-php-pgsql rh-php56-php-ldap postgresql postgresql-devel postgresql-libs autoconf automake glibc-devel glibc-headers libcom_err-devel libcurl-devel libstdc++-devel make openssl-devel pcre-devel gcc gcc-c++ gdb gdb-gdbserver git libgcrypt-devel libgpg-error-devel libxml2-devel libxslt-devel openssh openssh-clients sqlite-devel zlib-devel && \
